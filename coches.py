@@ -1,6 +1,6 @@
 from coche import Coche
 
-class Coche():
+class Coches():
     lista_coches = []
 
     def agregar_coche(self, coche):
@@ -20,6 +20,12 @@ class Coche():
             print('Coche eliminado correctamente.')
         else:
             print('Coche no encontrado.')
+
+    def existe_coche(self, matricula):
+        for coche in self.lista_coches:
+            if coche.matricula == matricula:
+                return True
+        return False
 
     def mostrar_coches(self):
         if not self.lista_coches:
